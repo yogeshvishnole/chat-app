@@ -1,3 +1,15 @@
 sudo: required
 services:
   - docker
+
+  deploy: 
+    provider: elasticbeanstalk
+    region: "ap-south-1"
+    app: "docker-chat-app"
+    env: "DockerChatApp-env"
+    bucket_name: "elasticbeanstalk-ap-south-1-858207080983"
+    bucket_path: "docker-chat-app"
+    on:
+      branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
