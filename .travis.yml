@@ -1,4 +1,5 @@
 sudo: required
+language: node_js
 deploy:
   provider: elasticbeanstalk
   region: "ap-south-1"
